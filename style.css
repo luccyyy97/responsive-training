@@ -1,0 +1,224 @@
+:root {
+    --color-mainbg: #F3E5D7;
+    --color-pagebg: #FFFFFF;
+    --color-contentbg: #FFF7FB;
+
+    --color-title: #312E2C;
+    --color-heading: #854632;
+    --color-subheading: #7A284E;
+    --color-paragraph: #5F564D;
+    --color-linebreak: #E3DDD7;
+    --color-shadow: #1E1E1E;
+
+    --font-youngSerif: "Young Serif";
+    --font-outfit: "Outfit";
+
+    --font-shadow: 0px 2px 2px hsla(0, 0%, 12%, 0.25);
+
+    --font-sizeOne: 2.5rem;
+    --font-sizeTwo: 1.75rem;
+    --font-sizeThree: 1.25rem;
+    --font-sizeFour: 1rem;
+
+    --font-weightBold: 700;
+    --font-weightSemiBold: 600;
+    --font-weightMedium: 400;
+    --font-weightLight: 100;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--color-mainbg);
+}
+
+h1 {
+    font-family: var(--font-youngSerif);
+    font-weight: var(--font-weightSemiBold);
+    text-shadow: var(--font-shadow);
+}
+
+h2 {
+    font-family: var(--font-youngSerif);
+    font-weight: var(--font-weightSemiBold);
+    color: var(--color-heading);
+    text-shadow: var(--font-shadow);
+}
+
+body > div {
+    max-width: 46rem;
+    height: auto;
+    background-color: var(--color-pagebg);
+    position: relative;
+    left: 50%;
+    margin-top: 10rem;
+    transform: translateX(-50%);
+    border-radius: 24px;
+    box-shadow: 0px 2px 5px var(--color-shadow);
+}
+
+#header > img {
+    max-height: 18.75rem;
+    width: auto;
+    border-radius: 12px;
+    position: relative;
+    margin-top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#header > div {
+    background-color: var(--color-contentbg);
+    border-radius: 12px;
+    box-shadow: 0px 2px 5px var(--color-shadow);
+}
+
+#header > p {
+    font-family: var(--font-outfit);
+    font-size: var(--font-sizeFour);
+    color: var(--color-paragraph);
+    text-shadow: var(--font-shadow);
+}
+
+#header > div > h3 {
+    padding-top: 28px;
+    padding-right: 28px;
+    padding-left: 28px;
+    font-family: var(--font-outfit);
+    font-weight: var(--font-weightSemiBold);
+    font-size: var(--font-sizeThree);
+    color: var(--color-subheading);
+}
+
+#header > div > ul {
+    padding-bottom: 28px;
+}
+
+#header > div > ul > li::marker {
+    color: var(--color-subheading);
+}
+
+#header > div > ul > li {
+    padding-top: 8px;
+    padding-left: 16px;
+    font-family: var(--font-outfit);
+    color: var(--color-paragraph);
+}
+
+#header > h2 {
+    margin-top: 32px;
+}
+
+#header > ul {
+    margin-top: 24px;
+    font-family: var(--font-outfit);
+    text-shadow: var(--font-shadow);
+    padding-left: 18px;
+}
+
+#header > ul > li {
+    padding-left: 16px;  
+    color: var(--color-paragraph);
+}
+
+#header > ul > li::marker {
+    color: var(--color-heading);
+}
+
+#header > ul > li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+section:first-child {
+    padding-top: 2.5rem;
+    padding-bottom: 32px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+section:not(section:first-child) {
+    padding-top: 32px;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+hr:not(.table hr) {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    height: 5px;
+    background-color: var(--color-linebreak);
+    border: none;
+}
+
+/* SECTION - INSTRUCTION PAARTS */
+
+#instructions > ol {
+    font-family: var(--font-outfit);
+    text-shadow: var(--font-shadow);
+    color: var(--color-paragraph);
+    padding-left: 18px;
+}
+
+#instructions > ol > li {
+    padding-left: 16px;
+}
+
+#instructions > ol > li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+#instructions > ol > li::marker {
+    color: var(--color-heading);
+    font-weight: var(--font-weightBold);
+}
+
+
+/* Nutrition Parts */ 
+
+#nutritions > p {
+    font-family: var(--font-outfit);
+    color: var(--color-paragraph);
+    text-shadow: var(--font-shadow);
+}
+
+.table > hr {
+    height: 5px;
+    background-color: var(--color-linebreak);
+    border: none;
+}
+
+.tablerow {
+    display: flex;
+    width: 200px;
+}
+
+.tablehead {
+    font-family: var(--font-outfit);
+    color: var(--color-paragraph);
+    text-shadow: var(--font-shadow);
+    min-width: 80px;
+    margin-left: 30px;
+}
+
+.tabledata {
+    font-family: var(--font-outfit);
+    font-weight: var(--font-weightBold);
+    color: var(--color-heading);
+    text-shadow: var(--font-shadow);
+    margin-left: 230px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 375px) {
+    body > div {
+        margin-top: min(163px, 0%);
+    }
+
+    #header > img {
+        min-height: 171px;
+    }
+}
+
